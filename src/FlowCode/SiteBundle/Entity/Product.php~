@@ -5,9 +5,9 @@ namespace FlowCode\SiteBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * FlowCode\SiteBundle\Entity\Category
+ * FlowCode\SiteBundle\Entity\Product
  */
-class Category
+class Product
 {
     /**
      * @var integer $id
@@ -73,35 +73,5 @@ class Category
     public function getDescription()
     {
         return $this->description;
-    }
-
-    /**
-     * @var FlowCode\SiteBundle\Entity\Product
-     */
-    private $products;
-
-    public function __construct()
-    {
-        $this->products = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-    
-    /**
-     * Add products
-     *
-     * @param FlowCode\SiteBundle\Entity\Product $products
-     */
-    public function addProduct(\FlowCode\SiteBundle\Entity\Product $products)
-    {
-        $this->products[] = $products;
-    }
-
-    /**
-     * Get products
-     *
-     * @return Doctrine\Common\Collections\Collection 
-     */
-    public function getProducts()
-    {
-        return $this->products;
     }
 }

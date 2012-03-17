@@ -1,3 +1,15 @@
 SiteBundle_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: SiteBundle:Default:index }
+
+newProduct:
+    pattern: /newProduct
+    defaults: { _controller: SiteBundle:ABMProducts:newProduct }
+    
+saveProduct:
+    pattern: /saveProduct
+    defaults: { _controller: SiteBundle:ABMProducts:saveProduct }
+
+showProduct:
+    pattern: /showProduct
+    defaults: { _controller: SiteBundle:ABMProducts:showProduct }

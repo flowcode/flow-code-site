@@ -1,0 +1,10 @@
+{% extends "SiteBundle::layout.html.twig" %}
+
+{% block body %}
+    <span class="h1">Nuevo Producto:</span>
+    <form action="{{ path('newProduct') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+
+        <input type="submit" />
+    </form>
+{% endblock %}
